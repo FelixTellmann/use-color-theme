@@ -13,6 +13,8 @@ const mockElement = {
 const preferDarkQuery = '(prefers-color-scheme: dark)';
 
 const initialize = (storageKey, storageProvider, glbl = global) => {
+  // eslint-disable-next-line no-console
+  console.log(storageKey, storageProvider);
   const usePersistedcolorThemeState = storageKey
     ? createPersistedState(storageKey, storageProvider)
     : useState;
