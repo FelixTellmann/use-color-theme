@@ -14,11 +14,12 @@ const useColorTheme = (
     global,
   } = {}
 ) => {
-  classNames.reduce(({ acc, item }) => {
-    if (acc.includes(item)) {
+  classNames.reduce((acc, item) => {
+    if (acc.length > 0 && acc.includes(item)) {
       throw new Error('Duplicate Classnames are not allowed.');
     }
-    return acc.push(item);
+    acc.push(item);
+    return acc;
   }, []);
   const {
     usePersistedcolorThemeState,
