@@ -22,22 +22,6 @@ The user setting persists to `localStorage`.
 
 2.  If you don't use global classes, you can specify an `onChange` handler and take care of the implementation of switching to dark mode yourself.
 
-## New in Version 2.x
-
-- `useColorTheme` now persists between sessions. It stores the user setting in
-  `localStorage`.
-
-- It shares dark mode state with all other `useColorTheme` components on the page.
-
-- It shares dark mode state with all other tabs/browser windows.
-
-- The initial dark mode is queried from the system. Note: this requires a browser that supports the `prefers-color-scheme: dark` media query
-  ([currently Chrome, Firefox, Safari and Edge](https://caniuse.com/#search=prefers-color-scheme))
-  and a system that supports dark mode, such as macOS Mojave.
-
-- Changing the system dark mode state will also change the state of `useColorTheme`
-  (i.e, change to light-theme in the system will change to light-theme in your app).
-
 - Support for Server Side Rendering (SSR) in version 2.2 and above.
 
 ## Requirement
@@ -58,8 +42,7 @@ const colorTheme = useColorTheme(initialState, colorThemeConfig);
 
 ### Parameters
 
-You pass `useColorTheme` an `initialState` (a boolean specifying whether it should be in dark mode
-by default) and an optional `colorThemeConfig` object. The configuration object may contain the following keys.
+You pass `useColorTheme` an `initialState` (a `string` specifying to define the default className, defaults to `light-theme`) and an optional `colorThemeConfig` object. The configuration object may contain the following keys.
 
 | Key               | Description                                                                                                                                                                                                                                                                                                               |
 | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -75,9 +58,9 @@ A `colorTheme` object is returned with the following properties.
 
 | Key         | Description                                             |
 | :---------- | :------------------------------------------------------ |
-| `value`     | A boolean containing the current state of dark mode.    |
+| `value`     | The string containing the current state className.    |
 | `set('value')`  | A function that allows you to set color theme to to `'value'`.  |
-| `toggle()`  | A function that allows you to toggle dark mode.         |
+| `toggle()`  | A function that allows you to toggle dark mode, iterating over all provided theme classes.         |
 
 Note that because the methods don't require any parameters, you can call them
 direcly from an `onClick` handler from a button, for example
