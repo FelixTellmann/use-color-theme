@@ -1,7 +1,7 @@
 # use-color-theme
 
-A custom [React Hook](https://reactjs.org/docs/hooks-overview.html) to help you implement a "dark mode" component for your application.
-The user setting persists to `localStorage`.
+A custom [React Hook](https://reactjs.org/docs/hooks-overview.html) to help you implement a "theming" classes for your application.
+The user setting persists to `localStorage` and allows you to add as many color themes as you wish.
 
 `useColorTheme` works in one of two ways:
 
