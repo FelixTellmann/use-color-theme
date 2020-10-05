@@ -83,11 +83,11 @@ const colorThemeToggle = () => {
 
   return (
     <div>
-      <button type="button" onClick={colorTheme.disable}>
+      <button type="button" onClick={colorTheme.set('light-theme')}>
         ☀
       </button>
       <Toggle checked={colorTheme.value} onChange={colorTheme.toggle} />
-      <button type="button" onClick={colorTheme.enable}>
+      <button type="button" onClick={colorTheme.set('dark-theme')}>
         ☾
       </button>
     </div>
