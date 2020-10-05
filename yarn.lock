@@ -7710,6 +7710,14 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
+use-color-theme@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/use-color-theme/-/use-color-theme-1.0.6.tgz#003565ce84d6fe9234f3e82d026fa30573ccbacf"
+  integrity sha512-iylBNIhPGn8dZwzlzbpkHwvBw/QKDRCEZSLr/x5Wjoce7/yDrD2g1nkONbk9ZbCupFJzte84G2ixy2Cmh6Itog==
+  dependencies:
+    "@use-it/event-listener" "^0.1.2"
+    use-persisted-state "^0.3.0"
+
 use-persisted-state@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/use-persisted-state/-/use-persisted-state-0.3.0.tgz#f8e3d2fd8eee67e0c86fd596c3ea3e8121c07402"
