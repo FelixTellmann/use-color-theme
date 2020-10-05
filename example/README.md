@@ -414,7 +414,7 @@ We can setup a code blocking script that completes loading before anything
 
 ```js:colorTheme.js
 // Insert this script in your index.html right after the <body> tag.
-// This will help to prevent a flash if dark mode is the default.
+// This will help to prevent a flash if color theme is the default.
 
 (function() {
   // Change these if you use something different in your hook.
@@ -463,9 +463,9 @@ This script does the following:
 
 1. It looks for the `localStorage` with the key `colorTheme`
 2. Then it looks for the `prefers-color-scheme` CSS media query, to check
- whether its set to dark, which translates to the user loading the website having a system using dark mode.
+ whether its set to dark, which translates to the user loading the website having a system using color theme.
    * If there's no mode set in localStorage
-     but the user's system uses dark mode, we add a class `dark-theme` to the
+     but the user's system uses color theme, we add a class `dark-theme` to the
       body of the main document.
    * If there's nothing set in localStorage we don't do anything, which will
     end up loading the default theme of our Site.

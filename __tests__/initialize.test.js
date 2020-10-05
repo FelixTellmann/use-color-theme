@@ -96,7 +96,7 @@ const testSuite = (g = global, { getInitialValue, getDefaultOnChange, mediaQuery
       expect(calls[1]).toEqual({ method: 'remove', className: 'dark-theme' });
       expect(calls[2]).toEqual({ method: 'add', className: 'light-theme' });
     });
-    test('if you pass it `true`, the "dark mode" class is added to the element', () => {
+    test('if you pass it `true`, the "color theme" class is added to the element', () => {
       const calls = [];
       const mockElement = createTestElement(calls);
       const defaultOnChange = getDefaultOnChange(mockElement, ['light-theme', 'dark-theme']);
@@ -130,11 +130,11 @@ describe('initialize with an empty object (SSR)', () => {
   const global = {};
   testSuite(global, initialize(null, null, global));
 });
-describe('initialize with a mock `window` (browser with dark mode support)', () => {
+describe('initialize with a mock `window` (browser with color theme support)', () => {
   const global = mockedWindowSupported;
   testSuite(global, initialize(null, null, global));
 });
-describe('initialize with a mock `window` (browser without dark mode support)', () => {
+describe('initialize with a mock `window` (browser without color theme support)', () => {
   const global = mockedWindowNotSupported;
   testSuite(global, initialize(null, null, global));
 });

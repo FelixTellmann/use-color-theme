@@ -6,7 +6,7 @@ The user setting persists to `localStorage` and allows you to add as many color 
 `useColorTheme` works in one of two ways:
 
 1.  By toggling a CSS class on whatever element you specify (defaults to `document.body`).
-    You then setup your CSS to display different views based on the presence of the selector. For example, the following CSS is used in the demo app to ease the background color in/out of dark mode.
+    You then setup your CSS to display different views based on the presence of the selector. For example, the following CSS is used in the demo app to ease the background color in/out of color theme.
 
     ```css
     body.light-theme {
@@ -20,7 +20,7 @@ The user setting persists to `localStorage` and allows you to add as many color 
     }
     ```
 
-2.  If you don't use global classes, you can specify an `onChange` handler and take care of the implementation of switching to dark mode yourself.
+2.  If you don't use global classes, you can specify an `onChange` handler and take care of the implementation of switching to dark themee yourself.
 
 - Support for Server Side Rendering (SSR) in version 2.2 and above.
 
@@ -48,8 +48,8 @@ You pass `useColorTheme` an `initialState` (a `string` specifying to define the 
 | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `classNames`      | The classes to apply. Default = [`'light-theme'`,`'dark-theme'`].                                                                                                                                                                                                                                                                             |
 | `element`         | The element to apply the class name. Default = `document.body`.                                                                                                                                                                                                                                                           |
-| `onChange`        | A function that will be called when the dark mode value changes and it is safe to access the DOM (i.e. it is called from within a `useEffect`). If you specify `onChange` then `classNames`, and `element` are ignored (i.e. no classes are automatically placed on the DOM). You have full control! |
-| `storageKey`      | A string that will be used by the `storageProvider` to persist the dark mode value. If you specify a value of `null`, nothing will be persisted. Default = `colorTheme`.                                                                                                                                                                                                                   |
+| `onChange`        | A function that will be called when the color theme value changes and it is safe to access the DOM (i.e. it is called from within a `useEffect`). If you specify `onChange` then `classNames`, and `element` are ignored (i.e. no classes are automatically placed on the DOM). You have full control! |
+| `storageKey`      | A string that will be used by the `storageProvider` to persist the dark themee value. If you specify a value of `null`, nothing will be persisted. Default = `colorTheme`.                                                                                                                                                                                                                   |
 | `storageProvider` | A storage provider. Default = `localStorage`. You will generally never need to change this value.                                                                                                                                                                                                                       |
 
 ### Return object
@@ -60,7 +60,7 @@ A `colorTheme` object is returned with the following properties.
 | :---------- | :------------------------------------------------------ |
 | `value`     | The string containing the current state className.    |
 | `set('value')`  | A function that allows you to set color theme to to `'value'`.  |
-| `toggle()`  | A function that allows you to toggle dark mode, iterating over all provided theme classes.         |
+| `toggle()`  | A function that allows you to toggle dark themee, iterating over all provided theme classes.         |
 
 Note that because the methods don't require any parameters, you can call them
 direcly from an `onClick` handler from a button, for example
@@ -68,8 +68,8 @@ direcly from an `onClick` handler from a button, for example
 
 ## Example
 
-Here is a simple component that uses `useColorTheme` to provide a dark mode toggle control.
-If dark mode is selected, the CSS class `color-theme` is applied to `document.body` and is removed
+Here is a simple component that uses `useColorTheme` to provide a color theme toggle control.
+If color theme is selected, the CSS class `color-theme` is applied to `document.body` and is removed
 when de-selected.
 
 ```jsx
@@ -99,8 +99,8 @@ export default colorThemeToggle;
 
 ## That flash!
 
-If your CSS is setup to default to light-theme, but the user selects dark mode,
-the next time they visit your app, they will be in dark mode.
+If your CSS is setup to default to light-theme, but the user selects color theme,
+the next time they visit your app, they will be in color theme.
 However, the user will see a flash of light-theme before the app is spun up
 and `useColorTheme` is called.
 

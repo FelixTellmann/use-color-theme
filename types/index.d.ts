@@ -21,7 +21,7 @@ declare module 'use-color-theme' {
   }
 
   /**
-   * A custom React Hook to help you implement a "dark mode" component for your application.
+   * A custom React Hook to help you implement a "color theme" component for your application.
    */
   export default function useColorTheme(
     initialState?: string,

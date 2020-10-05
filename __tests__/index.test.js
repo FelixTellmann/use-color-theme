@@ -73,7 +73,7 @@ describe('useColorTheme without onChange', () => {
     expect(value).toBe('dark-theme');
   });
 
-  test('a media change to "dark mode" will return false', () => {
+  test('a media change to "color theme" will return false', () => {
     let callback;
 
     const mockGlobal = {
