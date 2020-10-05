@@ -4,7 +4,6 @@ export default function Index() {
       .page {
         width: 100vw;
         height: 100vh;
-        background-color: var(--background);
       }
 
       .wrapper {
@@ -14,7 +13,7 @@ export default function Index() {
       }
 
       h1 {
-        color: var(--heading);
+        color: var(--headings);
       }
 
       p {
