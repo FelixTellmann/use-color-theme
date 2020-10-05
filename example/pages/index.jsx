@@ -1,11 +1,6 @@
 export default function Index() {
   return <>
     <style jsx>{`
-      .page {
-        width: 100vw;
-        height: 100vh;
-      }
-
       .wrapper {
         max-width: 760px;
         padding: 0 32px;
