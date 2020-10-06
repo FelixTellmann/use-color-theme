@@ -13,10 +13,12 @@ The user setting persists to `localStorage` and allows you to add as many color 
       background-color: #fff;
       color: #333;
       transition: background-color 0.3s ease;
+      --color-text: #242424;
     }
     body.dark-theme {
       background-color: #1a1919;
       color: #999;
+      --color-text: #ffffff;
     }
     ```
 
